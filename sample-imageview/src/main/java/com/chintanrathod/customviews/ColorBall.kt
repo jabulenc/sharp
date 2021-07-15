@@ -21,7 +21,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.content.res.AppCompatResources
 import com.pixplicity.sharp.imageviewdemo.R
 
-class ColorBall(val context: Context, resourceId: Int, var point: Point, var iD: Int) {
+class ColorBall(val context: Context, resourceId: Int, var point: Point, var ballid: Int) {
     var drawable: Drawable = AppCompatResources.getDrawable(context, resourceId)!!
 	    get() {
             field.setBounds(
@@ -38,7 +38,7 @@ class ColorBall(val context: Context, resourceId: Int, var point: Point, var iD:
     val heightOfBall: Int
         get() = drawRadius * 2
 
-    val touchDistanceFromCenter: Int get() = widthOfBall * 4
+    val touchDistanceFromCenter: Int get() = widthOfBall * 3
     var x: Int
         get() = point.x
         set(x) {
@@ -57,6 +57,8 @@ class ColorBall(val context: Context, resourceId: Int, var point: Point, var iD:
     fun addX(x: Int) {
         point.x = point.x + x
     }
+
+    //val leftEdge: Int get() =  point.x
 
     companion object {
         var count = 0
