@@ -143,7 +143,6 @@ class DrawView : View {
                     // get the center for the ball
                     val centerX = ball.x + ball.widthOfBall
                     val centerY = ball.y + ball.heightOfBall
-                    paint!!.color = Color.CYAN
                     // calculate the radius from the touch to the center of the ball
                     val radCircle = Math
                         .sqrt(
@@ -165,7 +164,6 @@ class DrawView : View {
                 if (balID > -1) {
                     colorballs!![balID].x = X
                     colorballs!![balID].y = Y
-                    paint!!.color = Color.CYAN
                     if (groupId == 1) {
                         colorballs!![1].x = colorballs!![0].x
                         colorballs!![1].y = colorballs!![2].y
@@ -180,7 +178,6 @@ class DrawView : View {
                     }
                 } else {
                     if (startMovePoint != null) {
-                        paint!!.color = Color.CYAN
                         val diffX = X - startMovePoint!!.x
                         val diffY = Y - startMovePoint!!.y
                         startMovePoint!!.x = X
