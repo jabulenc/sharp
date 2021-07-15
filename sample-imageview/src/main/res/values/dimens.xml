@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="icon_size">32dp</dimen>
+    <dimen name="ball_rads">4dp</dimen>
+    <dimen name="rect_width">1dp</dimen>
 </resources>

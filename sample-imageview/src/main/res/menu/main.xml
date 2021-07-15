@@ -5,5 +5,9 @@
         android:id="@+id/action_render_bitmap"
         android:checkable="true"
         android:title="@string/render_bitmap" />
+    <item
+        android:id="@+id/launch_other_activity"
+        android:checkable="true"
+        android:title="Launch other" />
 
 </menu>
