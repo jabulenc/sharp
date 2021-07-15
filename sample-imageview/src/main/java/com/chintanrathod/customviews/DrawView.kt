@@ -154,27 +154,11 @@ class DrawView : View {
                         balID = ball.iD
                         if (balID == 1 || balID == 3) {
                             groupId = 2
-//                            canvas!!.drawRect(
-//                                point1!!.x.toFloat(),
-//                                point3!!.y.toFloat(),
-//                                point3!!.x.toFloat(),
-//                                point1!!.y.toFloat(),
-//                                paint!!
-//                            )
                         } else {
                             groupId = 1
-//                            canvas!!.drawRect(
-//                                point2!!.x.toFloat(),
-//                                point4!!.y.toFloat(),
-//                                point4!!.x.toFloat(),
-//                                point2!!.y.toFloat(),
-//                                paint!!
-//                            )
                         }
-                        //invalidate()
                         break
                     }
-                    //invalidate()
                 }
             }
             MotionEvent.ACTION_MOVE ->             // move the balls the same as the finger
@@ -187,27 +171,13 @@ class DrawView : View {
                         colorballs!![1].y = colorballs!![2].y
                         colorballs!![3].x = colorballs!![2].x
                         colorballs!![3].y = colorballs!![0].y
-//                        canvas!!.drawRect(
-//                            point1!!.x.toFloat(),
-//                            point3!!.y.toFloat(),
-//                            point3!!.x.toFloat(),
-//                            point1!!.y.toFloat(),
-//                            paint!!
-//                        )
                     } else {
                         colorballs!![0].x = colorballs!![1].x
                         colorballs!![0].y = colorballs!![3].y
                         colorballs!![2].x = colorballs!![3].x
                         colorballs!![2].y = colorballs!![1].y
-//                        canvas!!.drawRect(
-//                            point2!!.x.toFloat(),
-//                            point4!!.y.toFloat(),
-//                            point4!!.x.toFloat(),
-//                            point2!!.y.toFloat(),
-//                            paint!!
-//                        )
+
                     }
-                    //invalidate()
                 } else {
                     if (startMovePoint != null) {
                         paint!!.color = Color.CYAN
@@ -223,24 +193,6 @@ class DrawView : View {
                         colorballs!![1].addY(diffY)
                         colorballs!![2].addY(diffY)
                         colorballs!![3].addY(diffY)
-//                        if (groupId == 1) canvas!!.drawRect(
-//                            point1!!.x.toFloat(),
-//                            point3!!.y.toFloat(),
-//                            point3!!.x.toFloat(),
-//                            point1!!.y.toFloat(),
-//                            paint!!
-//                        ) else canvas!!.drawRect(
-//                            point2!!.x.toFloat(),
-//                            point4!!.y.toFloat(),
-//                            point4!!.x.toFloat(),
-//                            point2!!.y.toFloat(),
-//                            paint!!
-//                        )
-                        // Re-set width based on scale
-//                        updateLayoutParams {
-//                            height = colorballs
-//                        }
-                        //invalidate()
                     }
                 }
             MotionEvent.ACTION_UP -> {
