@@ -16,8 +16,7 @@
             android:id="@+id/drawView1"
             android:padding="@dimen/ball_rads"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/jellyfish" />
+            android:layout_height="match_parent"/>
 
     </RelativeLayout>
 
@@ -30,4 +29,9 @@
         android:autoSizeStepGranularity="1sp"
         tools:text="hello"
         />
+
+    <com.caverock.androidsvg.SVGImageView
+        android:id="@+id/svg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>

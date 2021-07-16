@@ -35,6 +35,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.2.0'
     implementation "androidx.core:core-ktx:1.6.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'com.caverock:androidsvg-aar:1.4'
 }
 
 apply from: "${rootProject.projectDir}/mavencentral_publish.gradle"
