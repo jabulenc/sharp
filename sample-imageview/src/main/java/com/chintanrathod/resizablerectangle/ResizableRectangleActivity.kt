@@ -20,6 +20,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.AppCompatTextView
 import com.caverock.androidsvg.SVG
 import com.caverock.androidsvg.SVGImageView
+import com.caverock.androidsvg.utils.SVGBase
 import com.chintanrathod.customviews.DrawView
 import com.pixplicity.sharp.imageviewdemo.R
 
@@ -31,7 +32,8 @@ class ResizableRectangleActivity : Activity() {
         dView?.onDrawListener = {
             findViewById<AppCompatTextView>(R.id.output)?.apply {
                 bringToFront()
-                text = "X: ${dView.x} | Y: ${dView.y} \n Left: ${dView.left} | Right: ${dView.right} | Top: ${dView.top} | Bottom: ${dView.bottom} \n ${dView.colorballs?.mapIndexed { index, colorBall -> "\nBall $index: ${colorBall.point}" }?.joinToString("")}\n ScaleX: ${dView.scaleX} \n ScaleY: ${dView.scaleY}"
+                text = "X: ${dView.x} | Y: ${dView.y} \n Left: ${dView.left} | Right: ${dView.right} | Top: ${dView.top} | Bottom: ${dView.bottom} \n ${dView.colorballs?.mapIndexed { index, colorBall -> "\nBall $index: ${colorBall.point}" }?.joinToString("")}\n ScaleX: ${dView.scaleX} \n ScaleY: ${dView.scaleY}" +
+                        "Group BBox: ${((dView.svg2.base.rootElement.children[0] as SVGBase.Group).children[0] as SVGBase.Path).boundingBox}"
             }
         }
 
