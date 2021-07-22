@@ -312,7 +312,7 @@ class DrawView : SVGImageView {
                 rawLast = Point(event.rawX.roundToInt(), event.rawY.roundToInt())
             }
             MotionEvent.ACTION_UP -> {
-
+                // TODO: On up, save the translation to a state
             }
         }
         // redraw the canvas
