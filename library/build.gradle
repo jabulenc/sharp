@@ -36,6 +36,9 @@ dependencies {
     implementation "androidx.core:core-ktx:1.6.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     api files('libs/androidsvg-release.aar')
+    api "com.google.android.material:material:1.4.0"
+    api "androidx.appcompat:appcompat:1.2.0"
+    api "androidx.constraintlayout:constraintlayout:2.0.4"
 }
 
 apply from: "${rootProject.projectDir}/mavencentral_publish.gradle"
