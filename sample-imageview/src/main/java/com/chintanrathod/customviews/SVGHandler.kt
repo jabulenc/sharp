@@ -30,7 +30,6 @@ class SVGHandler: DefaultHandler() {
     ) {
         when (qName) {
             "g" -> {
-                Log.d("DERP", "${attributes?.getValue("transform")}")
                 currentId = attributes?.getValue("id") ?: ""
                 currentTransform = attributes?.getValue("transform") ?: "transform(1 0 0 1 0 0)"
             } // this is a transformation wrapper
@@ -76,11 +75,16 @@ class SVGHandler: DefaultHandler() {
             "g" -> {
             } // this is a transformation wrapper
             "path" -> {
-                Log.d("DERP PATH", builder.toString())
             } // this is the actual path
-            "text" -> {} // this defines text styling
-            "tspan" -> {} // this is the actual text
-            "svg" -> {} // the top level element, containing viewBox
+            "text" -> {
+
+            } // this defines text styling
+            "tspan" -> {
+
+            } // this is the actual text
+            "svg" -> {
+
+            } // the top level element, containing viewBox
         }
     }
 }
