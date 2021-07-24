@@ -24,7 +24,9 @@ import com.caverock.androidsvg.SVG
 import com.caverock.androidsvg.SVGImageView
 import com.caverock.androidsvg.utils.SVGBase
 import com.chintanrathod.customviews.DrawView
+import com.chintanrathod.customviews.SVGHandler
 import com.pixplicity.sharp.imageviewdemo.R
+import javax.xml.parsers.SAXParserFactory
 
 class ResizableRectangleActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +63,9 @@ class ResizableRectangleActivity : Activity() {
         val extractedHeader = "(?:<svg)(\\s*|.+)>".toRegex().findAll(testString).first().value
         val innerPaths = "<{1}g{1}(.*|\\n*\\s*(?!<\\/g>))*\\s*<{1}\\/{1}g{1}>{1}".toRegex().findAll(testString).map { it.value }
 
+        val saxParser = SAXParserFactory.newInstance().newSAXParser()
+        val handler = SVGHandler()
+        val output = saxParser.parse( testString.byteInputStream(), handler)
         /**
          * TODO: At this point, we should create objects for each split annotation
          * Each object should hold its current state, past changes, and (original state as a raw string)
